@@ -1,0 +1,4 @@
+database=localhost
+port=0000
+user=admin
+password=secret

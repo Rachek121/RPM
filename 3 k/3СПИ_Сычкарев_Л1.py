@@ -24,3 +24,28 @@ class ConfigCache:
 
     def set(self, key, value):
         self._config_cache[key] = value
+
+
+def main():
+    # Получаем экземпляр ConfigCache (генерируем его, если его ещё нет)
+    config_cache = ConfigCache.new()
+
+    # Получаем конфигурационные значения
+    db_host = config_cache.get('database')
+    db_port = config_cache.get('port')
+    db_user = config_cache.get('user')
+    db_password = config_cache.get('password')
+
+    # Печатаем загруженные конфигурации
+    print("Database Host:", db_host)
+    print("Database Port:", db_port)
+    print("Database User:", db_user)
+    print("Database Password:", db_password)
+
+    # Пример изменения конфигурации
+    config_cache.set('database', '127.0.0.1')
+    new_db_host = config_cache.get('database')
+    print("Updated Database Host:", new_db_host)
+
+if __name__ == "__main__":
+    main()

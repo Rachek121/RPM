@@ -43,3 +43,7 @@ def main():
     pdf_doc.save()
     word_doc.save()
     excel_doc.save()
+
+
+if __name__ == "__main__":
+    main()
