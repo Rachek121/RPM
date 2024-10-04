@@ -53,3 +53,5 @@ def main():
     context = CurrencyConverterContext(strategy)
     result = context.convert_currency(amount, rate)
     print(f"Результат конвертации: {result:.2f}")
+if __name__ == "__main__":
+    main()
